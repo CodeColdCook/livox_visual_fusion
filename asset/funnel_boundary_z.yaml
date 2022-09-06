@@ -1,0 +1,25 @@
+%YAML:1.0
+
+left_down.x: 14.8858146667
+left_down.y: 5.17078971863
+left_down.z: -0.303621292114
+
+left_up.x: 13.9646883011
+left_up.y: 5.07927417755
+left_up.z: 1.90267372131
+
+right_down.x: 14.8858146667
+right_down.y: 5.17078971863
+right_down.z: -0.303621292114
+
+right_up.x: 14.537771225
+right_up.y: -7.7135477066
+right_up.z: 0.759024620056
+
+middle_down_left.x: 15.0006427765
+middle_down_left.y: 0.855642318726
+middle_down_left.z: -0.563720941544
+
+middle_down_right.x: 15.2285175323
+middle_down_right.y: -3.39958429337
+middle_down_right.z: -0.842543363571

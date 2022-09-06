@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam command="load" file="$(find livox_visual_fusion)/config/config.yaml" />
+  <node pkg="livox_visual_fusion" type="livox_visual_fusion_node" name="livox_visual_fusion_node" output="screen" >
+  </node>
+  <!-- <node pkg="rviz" name="rviz" type="rviz" args="-d $(find livox_visual_fusion)/rviz_cfg/fusion.rviz" output="screen"/>-->
+</launch>
+
+
