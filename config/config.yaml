@@ -1,26 +1,7 @@
-storage:
-    use_detector_result: false
-    rate: 20
-    intrinsic_file: asset/kalib_d/cam_matrix_b.yml
-    extrinsic_file: asset/kalib_d/extrinsic.yml
-    image_topic: /pointgrey/image_color
-    detector_topic: /xxx
-    lidar_topic: /livox/lidar
-    fusion_pub_topic: /warehouse_monitor/rgb_lidar
-    distance_valid: 100
 basic:
-    use_detector_result: false
-    rate: 1
-    intrinsic_file: asset/cam_matrix_b.yaml
-    extrinsic_file: asset/pointgrey_b.bin
-    boundary_file_path: asset/funnel_boundary_z.yaml
-    image_topic: /a_image
+    intrinsic_file: asset/NC_12002_10/cam_matrix.yaml
+    extrinsic_file: asset/NC_12002_10/pmtd_image.bin
+    image_topic: /pmtd/csi_camera/image_bgr
     lidar_topic: /livox/lidar
-    detector_topic: /xxx
-    fusion_pub_topic: /warehouse_monitor/funnel_fusion_pcl
-    funnel_statu_topic: /warehouse_monitor/funnel_statu
-    pcl_filtered_topic: /warehouse_monitor/funnel_pcl
-    distance_valid: 50
-    state_low: 1
-    state_normal: 2
-    state_high: 3
+    fusion_pub_topic: /usion_cloud
+    distance_valid: 200

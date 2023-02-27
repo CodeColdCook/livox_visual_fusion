@@ -25,9 +25,9 @@ bool LivoxVisualFusion::ProcessData(cv::Mat input_image,
 
   cv::Mat rectify_image = input_image.clone();
   UndistortImage(input_image, rectify_image);
-  cv::imshow("rectify_image",rectify_image);
-  cv::imshow("input_image",input_image);
-  cv::waitKey(1);
+  // cv::imshow("rectify_image",rectify_image);
+  // cv::imshow("input_image",input_image);
+  // cv::waitKey(1);
 
   for (size_t index = 0; index < input_cloud->points.size(); index++) {
     VPoint tmp_p = input_cloud->points[index];

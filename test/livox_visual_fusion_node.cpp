@@ -84,7 +84,7 @@ int main(int argc, char** argv) {
       sensor_msgs::PointCloud2 cloud_msg;
       pcl::toROSMsg(*fusion_cloud_ptr, cloud_msg);
       cloud_msg.header.stamp = ros::Time::now();
-      cloud_msg.header.frame_id = "/livox_frame";
+      cloud_msg.header.frame_id = "livox_frame";
 
       pub_fusion_cloud.publish(cloud_msg);
     }
