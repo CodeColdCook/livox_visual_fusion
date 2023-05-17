@@ -5,3 +5,17 @@ basic:
     lidar_topic: /livox/lidar
     fusion_pub_topic: /usion_cloud
     distance_valid: 200
+
+fusion_common:
+  path_intrinsic: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_004/intrinsic_cam04.yaml
+  path_extrinsic: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_004/extrinsic.yaml
+  distance: 200
+  flag_image_undistorted: -1
+
+fusion_with_fisheye:
+  scale: 9.6
+  path_image: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_004/0.jpg
+  # path_pcd: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_004/pcd_all.pcd
+  # path_pcd: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_004/pcd_test.pcd
+  path_pcd: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_004/0.pcd
+  path_pcd_reslut: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_004/pcd_color_single.pcd

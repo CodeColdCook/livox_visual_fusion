@@ -1,0 +1,21 @@
+basic:
+    intrinsic_file: asset/NC_12002_10/cam_matrix.yaml
+    extrinsic_file: asset/NC_12002_10/pmtd_image.bin
+    image_topic: /pmtd/csi_camera/image_bgr
+    lidar_topic: /livox/lidar
+    fusion_pub_topic: /usion_cloud
+    distance_valid: 200
+
+fusion_common:
+  path_intrinsic: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_001/cam_intrinsic.yaml
+  path_extrinsic: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_001/extrinsic.yaml
+  distance: 200
+  flag_image_undistorted: -1
+
+fusion_with_fisheye:
+  scale: 4
+  path_image: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_001/0.jpg
+  # path_pcd: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_004/pcd_all.pcd
+  # path_pcd: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_004/pcd_test.pcd
+  path_pcd: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_001/pcd_all.pcd
+  path_pcd_reslut: /home/mchris/catkin_workspace/cloud_image_fusion_ws/src/livox_visual_fusion/asset/NC_1.1_001/pcd_color_all.pcd

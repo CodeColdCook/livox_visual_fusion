@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam command="load" file="$(find livox_visual_fusion)/test_data/NC_1.1_001/config.yaml" />
+  <node pkg="livox_visual_fusion" type="fusion_with_fisheye" name="fusion_with_fisheye" output="screen" >
+  </node>
+</launch>
+
+

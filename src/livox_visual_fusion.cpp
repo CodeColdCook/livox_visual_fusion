@@ -1,4 +1,4 @@
-#include <livox_visual_fusion.h>
+#include "livox_visual_fusion/livox_visual_fusion.h"
 
 LivoxVisualFusion::LivoxVisualFusion(Config config)
     : m_config(config), start_flag(false) {}
@@ -25,9 +25,6 @@ bool LivoxVisualFusion::ProcessData(cv::Mat input_image,
 
   cv::Mat rectify_image = input_image.clone();
   UndistortImage(input_image, rectify_image);
-  // cv::imshow("rectify_image",rectify_image);
-  // cv::imshow("input_image",input_image);
-  // cv::waitKey(1);
 
   for (size_t index = 0; index < input_cloud->points.size(); index++) {
     VPoint tmp_p = input_cloud->points[index];
@@ -186,29 +183,4 @@ bool LivoxVisualFusion::LoadIntrinsic(std::string filepath) {
   m_cy = camK.at<double>(1, 2);
 
   return true;
-
-
-  /*
-  double a[3][3] = {838.656,0.,626.285,
-   0.,838.841,363.969,
-   0.,0.,1.};
-  double d[5][1] = {-0.030168379, -0.1065128379,
-  0, -0.000906385, 0};
-  camK = cv::Mat(3,3,CV_64F, a);
-  distort_param = cv::Mat(5,1,CV_64F, d);
-
-  m_image_size.width = 1280;
-  m_image_size.height = 720;
-
-  m_fx = camK.at<double>(0, 0);
-  m_cx = camK.at<double>(0, 2);
-  m_fy = camK.at<double>(1, 1);
-  m_cy = camK.at<double>(1, 2);
-
-  std::cout << "camK: \n" << camK << std::endl;
-  std::cout << "dist: \n" << distort_param << std::endl;
-  return true;
-  */
-
-	
 }

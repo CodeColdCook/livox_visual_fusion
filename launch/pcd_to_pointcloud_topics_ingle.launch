@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="rviz_enable" default="true"/>
+
+    <node pkg="pcl_ros" type="pcd_to_pointcloud" name="pmtd04" output="screen">
+      <param name="frame_id"    value="/livox_frame" />
+      <remap from="/cloud_pcd" to="/livox/color_cloud"/>
+      <param name="interval"    value= "1" />
+      <param name="file_name"    value= "$(find livox_visual_fusion)/test_data/NC_1.1_001/pcd_color_all.pcd" />
+    </node>
+    <group if="$(arg rviz_enable)">
+		  <node name="rviz" pkg="rviz" type="rviz" respawn="true"
+				  args="-d $(find livox_visual_fusion)/rviz_cfg/fusion.rviz"/>
+    </group>
+</launch>
